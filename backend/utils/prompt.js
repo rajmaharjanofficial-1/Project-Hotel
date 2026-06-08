@@ -1,0 +1,2 @@
+
+export const ROOM_DESCRIPTION_PROMPT = "Create a detailed and SEO-friendly room description for my hotel website. Follow these details: Hotel Name: %s, Room Type: %s, Price Per Night: रु%s, Location: %s, Amenities: %s. Make the description engaging, highlight comfort, luxury, and benefits for guests. Include key features and why a guest should book this room. Create the description in a markdown format. Ignore extra messages, don't use enter ASCII (\\n).";
