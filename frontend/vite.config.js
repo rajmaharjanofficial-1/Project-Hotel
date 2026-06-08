@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
 
   preview: {
-    allowedHosts: true
+    allowedHosts: ['.onrender.com']
   }
 })
