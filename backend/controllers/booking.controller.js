@@ -193,19 +193,24 @@ export const bookRoom = async (req, res) => {
   `,
 };
 
-    // await transporter.sendMail(mailOptions);
+    // 
+transporter.sendMail(mailOptions)
+  .then(() => console.log("Booking email sent"))
+  .catch((err) => console.error("Email error:", err));
 
-    return res.status(201).json({
-      success: true,
-      message: "Room booked successfully",
-      booking,
-    });
-  } catch (error) {
-    console.error(error.message);
-    return res
-      .status(500)
-      .json({ success: false, message: "Internal server error" });
-  }
+return res.status(201).json({
+  success: true,
+  message: "Room booked successfully",
+  booking,
+});
+
+} catch (error) {
+  console.error(error.message);
+  return res.status(500).json({
+    success: false,
+    message: "Internal server error",
+  });
+}
 };
 
 /* -----------------------------------
