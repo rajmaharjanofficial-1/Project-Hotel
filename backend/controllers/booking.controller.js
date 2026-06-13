@@ -193,7 +193,7 @@ export const bookRoom = async (req, res) => {
   `,
 };
 
-    await transporter.sendMail(mailOptions);
+    // await transporter.sendMail(mailOptions);
 
     return res.status(201).json({
       success: true,
